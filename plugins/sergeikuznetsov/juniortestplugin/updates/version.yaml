@@ -1,0 +1,8 @@
+1.0.1: First version of JuniorTestPlugin
+1.0.2:
+  - A categories table was created
+  - create_categories_table.php
+  - A products table was created
+  - create_products_table.php
+  - A pivot table for categories and products was created
+  - create_category_product_table.php

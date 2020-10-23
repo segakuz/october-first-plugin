@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+    price:
+        label: Price
+    categories:
+        label: Categories
+        relation: categories
+        select: name
+    image:
+        label: Image
+        default: null
+        type: text

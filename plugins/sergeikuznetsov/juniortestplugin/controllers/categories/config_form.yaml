@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/sergeikuznetsov/juniortestplugin/models/category/fields.yaml
+
+# Model Class name
+modelClass: SergeiKuznetsov\JuniorTestPlugin\Models\Category
+
+# Default redirect location
+defaultRedirect: sergeikuznetsov/juniortestplugin/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: sergeikuznetsov/juniortestplugin/categories/update/:id
+    redirectClose: sergeikuznetsov/juniortestplugin/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: sergeikuznetsov/juniortestplugin/categories
+    redirectClose: sergeikuznetsov/juniortestplugin/categories
+
+# Preview page
+preview:
+    title: Preview Category

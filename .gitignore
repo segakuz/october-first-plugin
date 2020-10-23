@@ -1,0 +1,32 @@
+
+# Core
+bootstrap/
+config/
+modules/
+artisan
+index.php
+server.php
+.htaccess
+
+# Vendor files
+vendor/
+
+# Log Files
+*.log
+
+# Sensitive files
+.env
+.env.*.php
+.env.php
+
+# Storage files
+storage/*.key
+storage/cms/*
+storage/temp
+storage/logs
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Misc
+node_modules/

@@ -17,4 +17,7 @@
   'SergeiKuznetsov\\JuniorTestPlugin\\Classes\\Resources\\CategoryResource' => 'plugins\\sergeikuznetsov\\juniortestplugin\\classes\\resources\\CategoryResource.php',
   'backend\\Controllers\\media' => 'modules\\backend\\controllers\\media.php',
   'cms\\Controllers\\index' => 'modules\\cms\\controllers\\index.php',
+  'sergeikuznetsov\\juniortestplugin\\Controllers\\buys' => 'plugins\\sergeikuznetsov\\juniortestplugin\\controllers\\buys.php',
+  'SergeiKuznetsov\\JuniorTestPlugin\\Models\\Buy' => 'plugins\\sergeikuznetsov\\juniortestplugin\\models\\Buy.php',
+  'SergeiKuznetsov\\JuniorTestPlugin\\Controllers\\Buys' => 'plugins\\sergeikuznetsov\\juniortestplugin\\controllers\\Buys.php',
 );

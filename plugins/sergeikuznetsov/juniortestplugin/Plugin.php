@@ -103,6 +103,12 @@ class Plugin extends PluginBase
                         'icon'        => 'icon-copy',
                         'url'         => Backend::url('sergeikuznetsov/juniortestplugin/categories'),
                         'permissions' => ['sergeikuznetsov.juniortestplugin.*'],
+                    ],
+                    'buys' => [
+                        'label'       => 'Buys',
+                        'icon'        => 'icon-copy',
+                        'url'         => Backend::url('sergeikuznetsov/juniortestplugin/buys'),
+                        'permissions' => ['sergeikuznetsov.juniortestplugin.*'],
                     ]
                 ]
             ],

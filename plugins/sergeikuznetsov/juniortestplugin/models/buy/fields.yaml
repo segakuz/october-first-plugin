@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    product:
+        label: Product name
+        type: relation
+        nameFrom: name
+    user_phone:
+        label: User phone
+        type: text
+        placeholder: +7 999 333 22 11

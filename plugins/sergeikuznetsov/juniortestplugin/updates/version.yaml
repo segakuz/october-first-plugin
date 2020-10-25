@@ -6,3 +6,6 @@
   - create_products_table.php
   - A pivot table for categories and products was created
   - create_category_product_table.php
+1.0.3:
+  - A buys table was created
+  - create_buys_table.php

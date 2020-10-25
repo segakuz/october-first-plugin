@@ -3,16 +3,16 @@
 use Model;
 
 /**
- * Product Model
+ * Buy Model
  */
-class Product extends Model
+class Buy extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'sergeikuznetsov_juniortestplugin_products';
+    public $table = 'sergeikuznetsov_juniortestplugin_buys';
 
     /**
      * @var array Guarded fields
@@ -22,16 +22,17 @@ class Product extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'product_id',
+        'user_phone'
+    ];
 
     /**
      * @var array Validation rules for attributes
      */
     public $rules = [
-        'name' => 'required',
-        'price' => 'required|numeric',
-        'categories' => 'required',
-        'image' => 'image'
+        'product_id' => 'required|exists:sergeikuznetsov_juniortestplugin_products,id',
+        'user_phone' => ['required', 'regex:/^((8|\+?7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/']
     ];
 
     /**
@@ -66,30 +67,14 @@ class Product extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [
-        'buys' => 'SergeiKuznetsov\JuniorTestPlugin\Models\Buy'
+    public $hasMany = [];
+    public $belongsTo = [
+        'product' => 'SergeiKuznetsov\JuniorTestPlugin\Models\Product'
     ];
-    public $belongsTo = [];
-    public $belongsToMany = [
-        'categories' => [
-            'SergeiKuznetsov\JuniorTestPlugin\Models\Category',
-            'table' => 'sergeikuznetsov_juniortestplugin_category_product'
-        ]
-    ];
+    public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [
-        'file' => 'System\Models\File'
-    ];
+    public $attachOne = [];
     public $attachMany = [];
-
-    /**
-     * Saves uploaded image url to image column
-     */
-    public function beforeSave()
-    {
-        $this->image = $this->file->getPath();
-    }
-
 }

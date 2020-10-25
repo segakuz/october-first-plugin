@@ -1,0 +1,35 @@
+title = "buy"
+url = "/buy"
+layout = "default"
+is_hidden = 0
+==
+<div class="container m-t">
+
+    {{ form_open({
+        url: 'api/items/buy',
+        method: 'Post',
+        class: 'form-elements',
+        model: '\SergeiKuznetsov\JuniorTestPlugin\Models\Buy'
+        }) 
+    }}
+    
+        <!-- Text Input (Left) -->
+        <div class="form-group text-field is-required">
+        
+        {{ form_label('product_id', 'Product id') }}
+        {{ form_text('product_id', '', {class: 'form-control', required: 'required'}) }}
+
+        </div>
+    
+        <!-- Text Input (Right) -->
+        <div class="form-group text-field is-required">
+        
+        {{ form_label('user_phone', 'User phone') }}
+        {{ form_text('user_phone', '', {class: 'form-control', required: 'required'}) }}
+
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Send</button>    
+    {{ form_close() }}
+    
+</div>
